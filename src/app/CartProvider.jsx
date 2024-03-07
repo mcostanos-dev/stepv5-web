@@ -97,6 +97,9 @@ export function CartProvider({ children }) {
     handleSetStock,
     handleSetDiscount,
     handleSetAllDiscounts,
+    setDiscount,
+    setOption,
+    setQuantity,
   };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

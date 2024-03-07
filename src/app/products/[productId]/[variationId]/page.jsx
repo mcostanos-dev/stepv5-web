@@ -2,7 +2,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageGallery from "@/components/product-page/ImageGallery";
 import Link from "next/link";
 import StarRating from "@/components/product-page/StarRating";
-import { Button, getButtonClasses } from "@/components/Button";
+import { getButtonClasses } from "@/components/Button";
 import { allProducts } from "@/config.js";
 import ProductOptions from "@/components/product-page/productOptions";
 import Price from "@/components/product-page/Price";
@@ -70,7 +70,11 @@ const ProductVariation = ({ params }) => {
                 ))}
               </div>
             </div>
-            <ProductOptions options={selectedVariation.options} />
+
+            <ProductOptions
+              variationId={variationId}
+              options={selectedVariation.options}
+            />
             <StockCount stock={selectedVariation?.stock} />
             <Price
               price={selectedVariation?.price}

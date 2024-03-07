@@ -2,9 +2,26 @@
 import { useContext } from "react";
 import { Button } from "../Button";
 import { CartContext } from "@/app/CartProvider";
+import { useEffect } from "react";
 
 const ProductOptions = ({ options }) => {
-  const { option: optionName, handleSetOption } = useContext(CartContext);
+  const {
+    option: optionName,
+    handleSetOption,
+    setOption,
+    setQuantity,
+    setDiscount,
+  } = useContext(CartContext);
+
+  useEffect(
+    function () {
+      setOption({});
+      setQuantity(1);
+      setDiscount(0);
+    },
+    [setOption, setQuantity, setDiscount]
+  );
+
   return (
     <div className="mb-6">
       <h4 className="mb-3 font-heading font-medium">

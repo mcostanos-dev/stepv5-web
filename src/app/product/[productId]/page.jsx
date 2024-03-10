@@ -20,6 +20,7 @@ const SingPeoduct = ({ params }) => {
           <Breadcrumbs
             category={"Strapping Machine"}
             productName={selectedProduct?.productName}
+            productPageLink={productId}
           />
           <ImageGallery images={selectedProduct?.images} />
 
@@ -46,7 +47,7 @@ const SingPeoduct = ({ params }) => {
                 {selectedProduct?.variations &&
                   selectedProduct.variations.map((variation) => (
                     <Link
-                      href={`/products/${productId}/${variation.id}`}
+                      href={`/product/${productId}/${variation.id}`}
                       key={variation.name}
                       className={getButtonClasses("secondary", "sm")}
                     >

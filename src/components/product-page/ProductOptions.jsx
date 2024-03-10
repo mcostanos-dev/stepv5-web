@@ -9,18 +9,12 @@ const ProductOptions = ({ options }) => {
     option: optionName,
     handleSetOption,
     setOption,
-    setQuantity,
-    setDiscount,
   } = useContext(CartContext);
 
-  useEffect(
-    function () {
-      setOption({});
-      setQuantity(1);
-      setDiscount(0);
-    },
-    [setOption, setQuantity, setDiscount]
-  );
+  useEffect(function () {
+    setOption({});
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="mb-6">

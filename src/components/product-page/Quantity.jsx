@@ -1,10 +1,15 @@
 "use client";
 import { CartContext } from "@/app/CartProvider";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const Quantity = () => {
-  const { quantity, handleSetQuantity } = useContext(CartContext);
+  const { quantity, handleSetQuantity, setQuantity } = useContext(CartContext);
+
+  useEffect(function () {
+    setQuantity(1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="mb-6">

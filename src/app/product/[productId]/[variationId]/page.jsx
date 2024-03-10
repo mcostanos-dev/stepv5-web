@@ -10,6 +10,7 @@ import Quantity from "@/components/product-page/Quantity";
 import AddToCartButton from "@/components/product-page/addToCartButton";
 import WishListButton from "@/components/product-page/WishListButton";
 import StockCount from "@/components/product-page/StockCount";
+import Discounts from "@/components/product-page/Discounts";
 
 const ProductVariation = ({ params }) => {
   const productId = params.productId;
@@ -29,7 +30,11 @@ const ProductVariation = ({ params }) => {
         <div className="flex flex-wrap -mx-4">
           <Breadcrumbs
             category={"Strapping Machine"}
-            productName={selectedProduct?.productName}
+            categorylink=""
+            productName={selectedProduct.productName}
+            productPageLink={`/product/${selectedProduct.id}`}
+            variation={selectedVariation.name}
+            variationPageLink={`/product/${selectedProduct.id}/${variationId}`}
           />
           <ImageGallery images={selectedVariation?.images} />
 
@@ -55,7 +60,7 @@ const ProductVariation = ({ params }) => {
               <div className="flex flex-wrap gap-1">
                 {selectedProduct?.variations.map((variation) => (
                   <Link
-                    href={`/products/${productId}/${variation.id}`}
+                    href={`/product/${productId}/${variation.id}`}
                     key={variation.name}
                     className={getButtonClasses(
                       "secondary",
@@ -76,10 +81,8 @@ const ProductVariation = ({ params }) => {
               options={selectedVariation.options}
             />
             <StockCount stock={selectedVariation?.stock} />
-            <Price
-              price={selectedVariation?.price}
-              discounts={selectedVariation?.discounts}
-            />
+            <Price price={selectedVariation?.price} />
+            <Discounts discounts={selectedVariation?.discounts} />
             <Quantity variationId={variationId} />
             <div className="flex flex-wrap -mx-2 mb-12">
               <AddToCartButton />

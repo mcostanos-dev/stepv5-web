@@ -49,9 +49,9 @@ export function CartProvider({ children }) {
         );
 
         if (highestDiscount !== null && highestDiscount.discount) {
-          handleSetDiscount(highestDiscount.discount);
+          handleSetCurrentDiscount(highestDiscount.discount);
         } else {
-          handleSetDiscount(0);
+          handleSetCurrentDiscount(0);
         }
       }
 
@@ -61,7 +61,7 @@ export function CartProvider({ children }) {
 
   const handleSetStock = (newStock) => setStock(newStock);
 
-  const handleSetDiscount = (newDiscount) => setDiscount(newDiscount);
+  const handleSetCurrentDiscount = (newDiscount) => setDiscount(newDiscount);
 
   const handleSetAllDiscounts = (newDiscounts) => {
     return setAllDiscounts(newDiscounts);
@@ -95,7 +95,7 @@ export function CartProvider({ children }) {
     handleSetPrice,
     handleSetQuantity,
     handleSetStock,
-    handleSetDiscount,
+    handleSetCurrentDiscount,
     handleSetAllDiscounts,
     setDiscount,
     setOption,

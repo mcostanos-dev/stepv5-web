@@ -2,8 +2,6 @@
 
 import { useContext, useEffect } from "react";
 import { CartContext } from "@/app/CartProvider";
-import { Button } from "../Button";
-import { cn } from "@/lib/utils";
 
 const Price = ({ price }) => {
   const { handleSetPrice, totalPrice } = useContext(CartContext);

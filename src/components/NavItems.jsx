@@ -1,22 +1,45 @@
+"use client";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import Link from "next/link";
 import { MENU_ITEMS } from "@/config.js";
-import { getButtonClasses } from "./Button";
+import NavItem from "./NavItem";
+import { useState, useRef } from "react";
+import useClickOutside from "@/hooks/useClickOutside";
 
 const NavItems = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const navRef = useRef(null);
+
+  useClickOutside(navRef, () => setActiveIndex(null));
+
   return (
-    <nav className="hidden lg:block bg-gray-50 h-16  border-b border-gray-200 shadow-sm">
+    <nav
+      ref={navRef}
+      className="hidden lg:block bg-white h-16  border-b border-stone-200 shadow-sm"
+    >
       <MaxWidthWrapper className="h-full">
-        <div className="hidden lg:flex lg:items-center lg:justify-center lg:space-x-2 h-full">
-          {MENU_ITEMS.map((item) => {
+        <div className="hidden lg:flex lg:items-center lg:justify-start lg:space-x-2 h-full">
+          {MENU_ITEMS.map((category, i) => {
+            function handleMouseEnter() {
+              setActiveIndex(i);
+            }
+
+            function handleMouseLeave() {
+              setActiveIndex(null);
+            }
+
+            const isOpen = i === activeIndex;
+
             return (
-              <Link
-                className={getButtonClasses("animateZoom", "lg")}
-                key={item.name}
-                href={item.href}
-              >
-                {item.name}
-              </Link>
+              <NavItem
+                key={i}
+                index={i}
+                isOpen={isOpen}
+                category={category}
+                navRef={navRef}
+                handleMouseEnter={handleMouseEnter}
+                handleMouseLeave={handleMouseLeave}
+              />
             );
           })}
         </div>

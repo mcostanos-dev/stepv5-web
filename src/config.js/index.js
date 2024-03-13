@@ -2,33 +2,242 @@ import TestImage from "../../public/test-image.jpg";
 
 export const MENU_ITEMS = [
   {
-    name: "Products",
-    href: "/products",
+    name: "CATEGORY 1",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1 test", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
   {
-    name: "New Arrivals",
-    href: "/new-arrivals",
+    name: "CATEGORY 2",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 4",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 5",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 6",
+        products: [
+          {
+            name: "Product 1",
+            href: "/",
+            img: TestImage,
+          },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
   {
-    name: "Best Sellers",
-    href: "/best-seller",
+    name: "CATEGORY 3",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
-
   {
-    name: "Catalog",
-    href: "/catalog",
+    name: "CATEGORY 4",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
   {
-    name: "Service",
-    href: "/service",
+    name: "CATEGORY 5",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
   {
-    name: "About Us",
-    href: "/about-us",
+    name: "CATEGORY 6",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
   {
-    name: "Contact Us",
-    href: "/contact-us",
+    name: "CATEGORY 7",
+    href: "/",
+    subCategories: [
+      {
+        name: "SUB CATEGORY 1",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 2",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+      {
+        name: "SUB CATEGORY 3",
+        products: [
+          { name: "Product 1", href: "/", img: TestImage },
+          { name: "Product 2", href: "/", img: TestImage },
+          { name: "Product 3", href: "/", img: TestImage },
+        ],
+      },
+    ],
   },
 ];
 

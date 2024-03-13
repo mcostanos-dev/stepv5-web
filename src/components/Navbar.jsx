@@ -13,7 +13,7 @@ const Navbar = () => {
   const user = null;
   return (
     <div className="bg-white sticky top-0 z-50">
-      <header className="relative bg-white">
+      <header className="relative  bg-white">
         <MaxWidthWrapper>
           <div className="flex items-center h-24">
             <Logo />

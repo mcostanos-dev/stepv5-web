@@ -9,7 +9,7 @@ const Breadcrumbs = ({
   variationPageLink = "",
 }) => {
   return (
-    <div className="w-full px-4">
+    <div className="w-full ">
       <ul className="flex flex-wrap items-center mb-6">
         <li className="mr-6">
           <Link

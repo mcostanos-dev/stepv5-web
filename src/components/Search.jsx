@@ -29,7 +29,7 @@ const Search = () => {
         </div>
         <input
           type="search"
-          className="block w-80 xl:w-96 p-4 ps-10 text-sm text-gray-600 border border-gray-300 rounded-md bg-gray-50 focus:border-2  focus:border-red-500 focus:outline-none   "
+          className="block w-80 xl:w-[550px] p-4 ps-10 text-sm text-gray-600 border border-gray-300 rounded-md bg-gray-50 focus:border-2  focus:border-red-500 focus:outline-none   "
           placeholder="Search..."
           required
         />

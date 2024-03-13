@@ -38,6 +38,8 @@ const Button = ({
   type = "button",
   className = "",
   onClick,
+  onMouseEnter,
+  onMouseLeave,
   disabled = false,
 }) => {
   const classes = getButtonClasses(variant, btnSize, className);
@@ -47,6 +49,8 @@ const Button = ({
       className={classes}
       onClick={onClick}
       disabled={disabled}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </button>

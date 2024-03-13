@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Button, getButtonClasses } from "@/components/Button";
+import { getButtonClasses } from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageGallery from "@/components/product-page/ImageGallery";
-import { singleProduct, allProducts } from "@/config.js";
+import { allProducts } from "@/config.js";
 
 import StarRating from "@/components/product-page/StarRating";
 
@@ -24,7 +24,7 @@ const SingPeoduct = ({ params }) => {
           />
           <ImageGallery images={selectedProduct?.images} />
 
-          <div className="w-full lg:w-1/2 px-4">
+          <div className="w-full lg:w-1/2 px-4 lg:px-0 ">
             <div className="max-w-full mb-6">
               <span className="text-xs text-gray-400 tracking-wider">
                 {selectedProduct?.productName}
@@ -47,7 +47,7 @@ const SingPeoduct = ({ params }) => {
                 {selectedProduct?.variations &&
                   selectedProduct.variations.map((variation) => (
                     <Link
-                      href={`/product/${productId}/${variation.id}`}
+                      href={`/${productId}/${variation.id}`}
                       key={variation.name}
                       className={getButtonClasses("secondary", "sm")}
                     >

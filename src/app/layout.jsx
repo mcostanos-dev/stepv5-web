@@ -2,7 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
-import { CartContext, CartProvider } from "./CartProvider";
+import { CartProvider } from "./CartProvider";
+import CookieConsent from "@/components/CookieConsent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
       <body className={cn("relative h-full font-sans", inter.className)}>
         <main className="relative flex flex-col min-h-screen">
           <CartProvider>
+            {/* <CookieConsent /> */}
             <Navbar />
             <div className="flex-grow flex-1">{children}</div>
           </CartProvider>

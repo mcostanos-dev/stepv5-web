@@ -7,21 +7,22 @@ import { allProducts } from "@/config.js";
 import ProductOptions from "@/components/product-page/ProductOptions";
 import Price from "@/components/product-page/Price";
 import Quantity from "@/components/product-page/Quantity";
-import AddToCartButton from "@/components/product-page/addToCartButton";
+
 import WishListButton from "@/components/product-page/WishListButton";
 import StockCount from "@/components/product-page/StockCount";
 import Discounts from "@/components/product-page/Discounts";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import AddToCartButton from "@/components/product-page/AddToCartButton";
 
 const ProductVariation = ({ params }) => {
   const productId = params.productId;
   const variationId = params.variationId;
 
-  const [selectedProduct] = allProducts.filter(
+  const [selectedProduct] = allProducts?.filter(
     (product) => product.id === Number(productId)
   );
 
-  const [selectedVariation] = selectedProduct.variations.filter(
+  const [selectedVariation] = selectedProduct?.variations.filter(
     (variation) => variation.id === Number(variationId)
   );
 

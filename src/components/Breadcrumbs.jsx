@@ -10,7 +10,7 @@ const Breadcrumbs = ({
 }) => {
   return (
     <div className="w-full ">
-      <ul className="flex flex-wrap items-center mb-6">
+      <ul className="flex flex-wrap items-center mb-12">
         <li className="mr-6">
           <Link
             className="flex items-center text-xs sm:text-sm font-medium text-gray-400 hover:text-gray-500"

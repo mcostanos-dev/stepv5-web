@@ -10,7 +10,7 @@ const NavItemCategory = ({ children, handleMouseEnter, isOpen }) => {
       className={getButtonClasses(
         "ghost",
         "sm",
-        `transition duration-300 text-sm font-semibold text-gray-700 hover:text-gray-600 ${
+        `transition duration-300 text-sm font-semibold text-gray-700 hover:text-gray-600 tracking-wider ${
           isOpen && "bg-gray-200 border-gray-500"
         }`
       )}

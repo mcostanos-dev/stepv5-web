@@ -1,10 +1,15 @@
-import Link from "next/link";
-import { getButtonClasses } from "@/components/Button";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ImageGallery from "@/components/product-page/ImageGallery";
+import Link from "next/link";
 import { allProducts } from "@/config.js";
-
 import StarRating from "@/components/product-page/StarRating";
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import HorizontalMargin from "@/components/HorizontalMargin";
+import Price from "@/components/product-page/Price";
+import AddToCartButton from "@/components/product-page/AddToCartButton";
+import { getButtonClasses } from "@/components/Button";
+import ProductContentNav from "@/components/product-page/ProductContentNav";
+import PriceTable from "@/components/product-page/PriceTable";
 
 const SingPeoduct = ({ params }) => {
   const productId = params.productId;
@@ -14,52 +19,55 @@ const SingPeoduct = ({ params }) => {
   );
 
   return (
-    <section className="pt-12 pb-24 bg-blueGray-100 rounded-b-10xl overflow-hidden">
-      <div className="container px-4 mx-auto">
-        <div className="flex flex-wrap -mx-4">
-          <Breadcrumbs
-            category={"Strapping Machine"}
-            productName={selectedProduct?.productName}
-            productPageLink={productId}
-          />
-          <ImageGallery images={selectedProduct?.images} />
+    <>
+      <MaxWidthWrapper>
+        <section className="py-2.5 md:py-16 ">
+          <div className="container px-4 mx-auto">
+            <div className="flex flex-wrap -mx-4">
+              <Breadcrumbs
+                category={"Strapping Machine"}
+                productName={selectedProduct?.productName}
+                productPageLink={productId}
+              />
+              <ImageGallery images={selectedProduct?.images} />
 
-          <div className="w-full lg:w-1/2 px-4 lg:px-0 ">
-            <div className="max-w-full mb-6">
-              <span className="text-xs text-gray-400 tracking-wider">
-                {selectedProduct?.productName}
-              </span>
-              <h2 className="mt-6 mb-4 text-xl md:text-2xl lg:text-3xl font-heading font-medium">
-                {selectedProduct?.productName}
-              </h2>
-
-              <p className="text-md text-gray-600">
-                {selectedProduct?.description}
-              </p>
-            </div>
-            <StarRating />
-            <div className="mb-6">
-              <h4 className="mb-3 font-heading font-medium space-x-1">
-                <span>Variant:</span>
-                <span className="text-gray-500">Select A Variant</span>
-              </h4>
-              <div className="flex flex-wrap gap-1">
-                {selectedProduct?.variations &&
-                  selectedProduct.variations.map((variation) => (
-                    <Link
-                      href={`/${productId}/${variation.id}`}
-                      key={variation.name}
-                      className={getButtonClasses("secondary", "sm")}
-                    >
-                      {variation.name}
-                    </Link>
-                  ))}
+              <div className="w-full lg:w-1/2 px-4 lg:px-0 ">
+                <div className="max-w-full mb-6">
+                  <span className="text-xs text-gray-400 tracking-wider">
+                    {selectedProduct?.productName}
+                  </span>
+                  <h2 className="mt-6 mb-4 text-xl md:text-xl lg:text-2xl font-heading font-bold tracking-tight">
+                    {selectedProduct?.productName}
+                  </h2>
+                  <StarRating />
+                  <HorizontalMargin />
+                  <Price price={1000} />
+                  <AddToCartButton />
+                  <HorizontalMargin />
+                  <p className="text-md text-gray-600 tracking-wide">
+                    {selectedProduct?.description}
+                    <span>
+                      <Link
+                        className="px-2 text-md text-teal-500 font-semibold  hover:text-teal-600 tracking-wide"
+                        href={"/"}
+                      >
+                        Read more
+                      </Link>
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+      </MaxWidthWrapper>
+      <ProductContentNav />
+      <div className="  bg-gray-50">
+        <section className="mx-auto py-2.5 md:py-12 max-w-screen-2xl">
+          <PriceTable />
+        </section>
       </div>
-    </section>
+    </>
   );
 };
 

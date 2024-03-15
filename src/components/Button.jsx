@@ -7,14 +7,14 @@ const buttonStyles = {
     default: "bg-red-500 text-white hover:bg-red-400",
     secondary:
       "bg-gray-50 text-gray-800 hover:bg-gray-200 border border-gray-200 ",
-    animateZoom:
-      " hover:scale-105 hover:-translate-y-1 hover:text-gray-800 transition-all duration-300",
+    emerald: "bg-emerald-400 text-white hover:bg-emerald-600",
     ghost: "hover:bg-gray-100 hover:text-gray-800 ",
     link: "text-primary underline-offset-4 hover:underline",
-    positive: "bg-teal-500 hover:bg-teal-500 text-white ",
+    positive: "hover:text-white hover:bg-teal-500 text-teal-500 ",
   },
   sizes: {
     default: "h-10 px-4 py-2",
+    tiny: "h-6 rounded-md px-1",
     sm: "h-9 rounded-md px-3",
     lg: "h-11 rounded-md px-8",
     icon: "h-10 w-10",

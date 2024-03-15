@@ -14,12 +14,15 @@ const Price = ({ price }) => {
   );
 
   return (
-    <div className=" mb-4 ">
+    <div className="flex flex-col space-y-1  mb-4">
+      <span className="text-md text-gray-400  tracking-wide">
+        Price Starts:
+      </span>
       <p className="flex items-start ">
-        <span className="mr-2 text-sm self-center text-gray-800 font-medium">
+        <span className="mr-1 text-md self-center text-gray-800 font-bold">
           $
         </span>
-        <span className="text-2xl text-gray-800 font-medium">{totalPrice}</span>
+        <span className="text-2xl text-gray-800 font-bold">{totalPrice}</span>
       </p>
     </div>
   );

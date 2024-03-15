@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={cn("relative h-full font-sans", inter.className)}>
         <main className="relative flex flex-col min-h-screen">
           <CartProvider>

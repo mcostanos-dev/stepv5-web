@@ -2,7 +2,7 @@
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
-const FadeIn = ({ children, className, duration = 0.4, delay = 0.3 }) => {
+const FadeIn = ({ children, className, duration = 0.4, delay = 0 }) => {
   return (
     <motion.div
       className={cn(className)}

@@ -5,11 +5,8 @@ import TableRow from "./TableRow";
 const PriceTable = () => {
   const tableHead = allProducts[0].tableHead;
   return (
-    <div className="mt-6 overflow-hidden rounded-sm bg-white px-6 shadow lg:px-4">
-      <table
-        id="price-table"
-        className="min-w-full border-collapse border-spacing-y-2 border-spacing-x-2"
-      >
+    <div className="overflow-hidden rounded-sm bg-white px-6 shadow lg:px-4">
+      <table className="min-w-full border-collapse border-spacing-y-2 border-spacing-x-2">
         <thead className="hidden border-b lg:table-header-group">
           <tr>
             {tableHead.map(

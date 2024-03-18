@@ -3,12 +3,11 @@ import { getButtonClasses } from "../Button";
 import MaxWidthWrapper from "../MaxWidthWrapper";
 
 const menu = [
-  "PRICE TABLE",
-  "ADDITIONAL OPTIONS",
-  "DESCRIPTION",
-  "FEATURE",
-  "SIMILAR PRODUCTS",
-  "REVIEWS",
+  { name: "PRICE TABLE", link: "#price-table" },
+  { name: "ACCESSORIES", link: "#accessories" },
+  { name: "DESCRIPTION", link: "#description" },
+  { name: "SIMILAR PRODUCTS", link: "#similar-products" },
+  { name: "REVIEWS", link: "#reviews" },
 ];
 
 const ProductContentNav = () => {
@@ -22,14 +21,14 @@ const ProductContentNav = () => {
                 return (
                   <li key={i} className="hover ">
                     <Link
-                      href="#"
+                      href={m.link}
                       className={getButtonClasses(
                         "positive",
                         "sm",
                         "font-semibold"
                       )}
                     >
-                      {m}
+                      {m.name}
                     </Link>
                   </li>
                 );

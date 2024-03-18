@@ -1,9 +1,8 @@
 import Link from "next/link";
-
+import LogoImg from "../../public/sal-tech-logo.png";
 import MaxWidthWrapper from "./MaxWidthWrapper";
 import { getButtonClasses } from "./Button";
 import Search from "./Search";
-
 import NavItems from "./NavItems";
 import Logo from "./Logo";
 import AvartarPlaceholder from "./AvartarPlaceholder";
@@ -16,7 +15,7 @@ const Navbar = () => {
       <header className="relative  bg-white">
         <MaxWidthWrapper>
           <div className="flex items-center h-24">
-            <Logo />
+            <Logo logoImg={LogoImg} />
 
             <div className="ml-auto flex ">
               <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-4  ">

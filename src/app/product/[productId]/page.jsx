@@ -82,7 +82,7 @@ const SingPeoduct = ({ params }) => {
       <MaxWidthWrapper>
         <section id="accessories" className=" py-2.5 md:py-20">
           <HeadingSecondary>Compatible Accesories</HeadingSecondary>
-          <div className="flex flex-row gap-x-2">
+          <div className="flex flex-row flex-wrap gap-x-2">
             <ProductCard />
             <ProductCard />
             <ProductCard />

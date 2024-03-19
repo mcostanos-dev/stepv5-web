@@ -4,7 +4,7 @@ import Image from "next/image";
 const ProductCard = () => {
   return (
     <article className="min-w-40 w-52 relative flex flex-col overflow-hidden rounded-sm border shadow-sm">
-      <Link href="/1/1">
+      <Link href="/product/1">
         <div className="aspect-square overflow-hidden">
           <Image
             className="h-full w-full object-cover transition-all duration-300 group-hover:scale-125"
